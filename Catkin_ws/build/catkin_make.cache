@@ -1,2 +1,0 @@
-
--DCATKIN_DEVEL_PREFIX=/home/ranfr/Projects/Catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ranfr/Projects/Catkin_ws/install -G Unix Makefiles
