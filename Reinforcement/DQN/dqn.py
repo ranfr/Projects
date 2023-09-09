@@ -6,7 +6,6 @@ from tqdm import trange
 import torch
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-import rl_utils
 
 
 class ReplayBuffer:
@@ -77,7 +76,7 @@ class DQN:
 
 
 lr = 2e-3
-num_episodes = 2500
+num_episodes = 500
 hidden_dim = 128
 gamma = 0.98
 epsilon = 0.01
@@ -120,19 +119,4 @@ plt.xlabel("Episodes")
 plt.ylabel("Returns")
 plt.title("DQN on {}".format(env_name))
 plt.show()
-
-# with open("./Data/data1.txt", "w") as file:
-#     for reward in return_list:
-#         file.write(str(reward) + "\n")
-
-# mv_return = rl_utils.moving_average(return_list, 9)
-# plt.plot(episodes_list, mv_return)
-# plt.xlabel("Episodes")
-# plt.ylabel("Returns")
-# plt.title("DQN on {}".format(env_name))
-# plt.show()
-
-# with open("./Data/data2.txt", "w") as file:
-#     for reward in mv_return:
-#         file.write(str(reward) + "\n")
         
